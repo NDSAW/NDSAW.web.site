@@ -8,11 +8,15 @@
     
     <style>
         /* General Styles */
+        body {
+  overflow-x: hidden;
+}
+
         body { font-family: Arial, sans-serif; background-color: #1a1a1a; color: #fff; margin: 0; padding: 0; }
         h2 { text-align: center; margin-bottom: 1rem; }
 
         /* Header */
-        header { background: #002244; padding: 1rem; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        header { background: #002244; padding: 1rem; display: flex; justify-content: space-between; align-items: center; position: relative; fixed; width: 100%; top: 0; z-index: 1000; }
         .logo-container { display: flex; align-items: center; }
         .logo-container img { width: 40px; height: 40px; margin-right: 10px; }
         .logo-text { font-size: 1.5rem; font-weight: bold; color: #fff; }
@@ -21,10 +25,15 @@
         .nav-links a { color: #fff; text-decoration: none; font-weight: bold; }
 /* Hamburger Menu Button - Hidden by Default on Desktop */
 .menu-icon {
-    display: none; /* Hide on larger screens */
-    font-size: 2rem;
+    display: none; /* Default hidden on desktop */
+    font-size: 2.5rem;
     cursor: pointer;
     color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Closer to center */
+    transform: translateX(-10px); /* Slight adjustment */
+    z-index: 1000; /* Keep it above menu */
 }
 
 /* Mobile Navigation */
